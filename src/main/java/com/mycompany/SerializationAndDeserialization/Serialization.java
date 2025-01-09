@@ -9,7 +9,7 @@ package com.mycompany.SerializationAndDeserialization;
 	 public static void main(String args[]){    
 	  try{    
 	  //Creating the object    
-	  Student s1 =new Student(211,"*******************Sunil Kumar***********************");    
+	  Student s1 =new Student(211,"*******************Sunil Kumar***********************",23);
 	  //Creating stream and writing the object    
 	  FileOutputStream fout=new FileOutputStream("C:\\JavaPractice\\Serialize.txt");    
 	  ObjectOutputStream out=new ObjectOutputStream(fout);    

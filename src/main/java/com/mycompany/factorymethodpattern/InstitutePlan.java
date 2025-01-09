@@ -1,8 +1,6 @@
 package com.mycompany.factorymethodpattern;
 
-import practice.designpattern.factorymethodpattern.Plan;
-
-public class InstitutePlan extends practice.designpattern.factorymethodpattern.Plan {
+public class InstitutePlan extends Plan {
 
 	public InstitutePlan() {
 		// TODO Auto-generated constructor stub

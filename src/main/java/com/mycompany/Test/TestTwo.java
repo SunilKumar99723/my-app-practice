@@ -6,8 +6,15 @@ public class TestTwo {
 	//condition: more then 2 constructor will not get the compiler error
 	 TestTwo(String str, String str2,String ...strings) {
 	}
-	
-	
+
+	public TestTwo(String a) {
+	}
+
+	public TestTwo() {
+
+	}
+
+
 	public static void main(String[] args) {
 		
 		TestTwo t1 = new TestTwo();

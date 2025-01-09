@@ -1,24 +1,27 @@
 package com.mycompany.dao;
 
-import java.sql.Connection; 
-import java.sql.PreparedStatement; 
-import java.sql.ResultSet; 
-import java.sql.SQLException; 
-import java.util.ArrayList; 
+import com.mycompany.jdbc.model.Employee;
+import com.mycompany.jdbc.util.DatabaseConnection;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
-import practice.jdbc.dao.EmployeeDao;
-import practice.jdbc.model.Employee;
-import practice.jdbc.util.DatabaseConnection; 
+//import practice.jdbc.dao.EmployeeDao;
+//import practice.jdbc.model.Employee;
+//import practice.jdbc.util.DatabaseConnection;
 
 public class EmployeeDaoImplementation 
 	implements EmployeeDao {
 
 	static Connection con 
-		= DatabaseConnection.getConnection(); 
+		= DatabaseConnection.getConnection();
 
 	@Override
-	public int add(Employee emp) 
+	public int add(Employee emp)
 		throws SQLException 
 	{ 
 

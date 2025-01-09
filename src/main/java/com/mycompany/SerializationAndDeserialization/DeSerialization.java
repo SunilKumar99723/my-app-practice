@@ -14,7 +14,7 @@ package com.mycompany.SerializationAndDeserialization;
 	  
 	  Student s=(Student)in.readObject();  
 	  //printing the data of the serialized object  
-	  System.out.println(s.id+" "+s.name);  
+	  System.out.println(s.getId() +" "+ s.getName());
 	  //closing the stream  
 	  in.close();  
 	  }catch(Exception e){System.out.println(e);}  

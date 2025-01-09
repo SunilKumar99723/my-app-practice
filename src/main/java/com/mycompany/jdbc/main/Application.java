@@ -1,12 +1,14 @@
 package com.mycompany.jdbc.main;
 
+import com.mycompany.jdbc.dao.EmployeeDaoImplementation;
+import com.mycompany.jdbc.model.Employee;
+
 import java.sql.Date;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.List; 
 
-import practice.jdbc.dao.EmployeeDaoImplementation; 
-import practice.jdbc.model.Employee; 
+//import practice.jdbc.dao.EmployeeDaoImplementation;
+//import practice.jdbc.model.Employee;
 
 public class Application { 
 
@@ -14,7 +16,7 @@ public class Application {
 		throws SQLException 
 	{ 
 
-		Employee emp = new Employee(); 
+		Employee emp = new Employee();
 		emp.setEmp_id(77);
 		emp.setEmp_FirstName("Sunil"); 
 		emp.setEmp_LastName("Kumar");
@@ -29,7 +31,7 @@ public class Application {
 		emp.setDepartmentID(50);
 		emp.setEmp_address("India");
 		
-		EmployeeDaoImplementation empDao= new EmployeeDaoImplementation(); 
+		EmployeeDaoImplementation empDao= new EmployeeDaoImplementation();
 
 		// add 
 //		empDao.add(emp); 

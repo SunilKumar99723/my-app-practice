@@ -1,8 +1,6 @@
 package com.mycompany.factorymethodpattern;
 
-import practice.designpattern.factorymethodpattern.Plan;
-
-public class DomesticPlan extends practice.designpattern.factorymethodpattern.Plan {
+public class DomesticPlan extends Plan {
 
 	public DomesticPlan() {
 		// TODO Auto-generated constructor stub

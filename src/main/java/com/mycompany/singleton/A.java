@@ -1,7 +1,7 @@
-/**
+package com.mycompany.singleton; /**
  * 
  */
-package com.mycompany.singleton;
+
 
 /**
  * from singleton class  we are calling factory method

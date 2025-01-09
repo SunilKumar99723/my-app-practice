@@ -1,13 +1,15 @@
 package com.mycompany.dao;
 
-import java.sql.SQLException; 
+import com.mycompany.jdbc.model.Employee;
+
+import java.sql.SQLException;
 import java.util.List; 
 
-import practice.jdbc.model.Employee; 
+//import practice.jdbc.model.Employee;
 
 public interface EmployeeDao { 
 
-	public int add(Employee emp) 
+	public int add(Employee emp)
 		throws SQLException; 
 	public void delete(int id) 
 		throws SQLException; 

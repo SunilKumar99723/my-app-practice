@@ -3,7 +3,7 @@ package com.mycompany.collection.list;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.xml.internal.bind.v2.runtime.NameList;
+//import com.sun.xml.internal.bind.v2.runtime.NameList;
 
 // Java 10-  List.copyOf(), Set.copyOf() And Map.copyOf() Methods
 
