@@ -1,0 +1,80 @@
+Creational design patterns in Spring Boot help manage object creation and provide flexibility and reuse of code. Here are some common creational design patterns used in Spring Boot:
+
+1. Singleton Pattern
+By default, Spring beans are singletons. This means that Spring creates only one instance of a bean per Spring container, which is reused throughout the application.
+
+
+@Service
+public class MyService {
+    // Singleton Service Bean
+}
+2. Factory Pattern
+Spring’s @Bean methods often act as factory methods, which create and configure objects.
+
+
+@Configuration
+public class MyConfig {
+    @Bean
+    public MyBean myBean() {
+        return new MyBean();
+    }
+}
+3. Prototype Pattern
+The prototype pattern is used when you want multiple instances of a bean. You can define a bean with prototype scope in Spring.
+
+
+@Component
+@Scope("prototype")
+public class PrototypeBean {
+    // Prototype Bean
+}
+4. Builder Pattern
+The builder pattern is used for constructing complex objects step by step. Spring Boot’s configuration classes often use this pattern to build objects with complex state.
+
+
+@Configuration
+public class DataSourceConfig {
+    @Bean
+    public DataSource dataSource() {
+        return DataSourceBuilder.create()
+                                 .url("jdbc:mysql://localhost:3306/mydb")
+                                 .username("user")
+                                 .password("password")
+                                 .build();
+    }
+}
+5. Dependency Injection (DI)
+Dependency Injection is a fundamental design pattern in Spring. It allows the creation of dependent objects outside of a class and provides those objects to a class in different ways.
+
+
+@Component
+public class MyComponent {
+    private final MyService myService;
+
+    @Autowired
+    public MyComponent(MyService myService) {
+        this.myService = myService;
+    }
+}
+6. Abstract Factory Pattern
+Spring’s FactoryBean interface provides an abstract factory for creating objects. It allows for creating instances of complex objects that require custom instantiation logic.
+
+
+@Component
+public class MyFactoryBean implements FactoryBean<MyBean> {
+    @Override
+    public MyBean getObject() throws Exception {
+        return new MyBean();
+    }
+
+    @Override
+    public Class<?> getObjectType() {
+        return MyBean.class;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return true; // or false for prototype
+    }
+}
+These patterns simplify the process of object creation, configuration, and management in Spring Boot applications, making your code more maintainable and scalable.

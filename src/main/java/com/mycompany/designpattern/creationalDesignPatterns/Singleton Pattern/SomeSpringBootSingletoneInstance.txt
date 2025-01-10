@@ -1,0 +1,53 @@
+In Spring Boot, singleton instances refer to beans that are created and managed by the Spring container with a singleton scope. By default, all beans in Spring are singletons, meaning there is only one instance of the bean per Spring container. This design pattern is beneficial for resource management and efficiency, as it ensures that the same instance is reused throughout the application.
+
+Common Singleton Instances in Spring Boot
+Service Beans: These are the core of your application's business logic.
+
+@Service
+public class MyService {
+    // business methods
+}
+Repository Beans: These manage data access and interactions with the database.
+
+@Repository
+public interface MyRepository extends JpaRepository<MyEntity, Long> {
+    // custom query methods
+}
+Configuration Beans: These define configuration settings for your application.
+
+
+@Configuration
+public class MyConfig {
+    @Bean
+    public MyBean myBean() {
+        return new MyBean();
+    }
+}
+Controller Beans: These handle incoming web requests and return responses.
+
+
+@RestController
+public class MyController {
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, World!";
+    }
+}
+Component Beans: These are general-purpose beans that can be used anywhere in the application.
+
+
+@Component
+public class MyComponent {
+    // component methods
+}
+How Singleton Beans Work
+When a singleton bean is created, it is stored in the Spring container, and every time that bean is requested, the container returns the same instance. This is particularly useful for:
+
+Consistency: Ensuring a single source of truth across the application.
+
+Resource Management: Reducing memory overhead by reusing the same instance.
+
+Performance: Avoiding the overhead of creating new instances repeatedly.
+
+Scope Customization
+While the default scope is singleton, you can also define other scopes such as prototype, request, session, and more, depending on your requirements.
